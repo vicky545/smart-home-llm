@@ -18,7 +18,7 @@ llm = ChatGroq(
 
 # Initialize instructor embeddings using the Hugging Face model
 instructor_embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-large")
-vectordb_file_path = r"D:\3_project_codebasics_q_and_a\faiss_index_sh"
+vectordb_file_path = os.path.join("smart-home-llm", "faiss_index_sh")
 
 def create_vector_db():
     # Load data from the PDF manual
