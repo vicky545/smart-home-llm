@@ -1,0 +1,11 @@
+streamlit
+langchain_groq
+langchain-community
+InstructorEmbedding
+torch
+sentence-transformers==2.2.2
+huggingface_hub==0.25.2
+tiktoken
+faiss-cpu
+protobuf
+pypdf
