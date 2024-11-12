@@ -23,7 +23,7 @@ vectordb_file_path = "faiss_index_sh"
 
 def create_vector_db():
     # Load data from the PDF manual
-    loader = PyPDFLoader(file_path=r'230615_stronghouse-manual.pdf')
+    loader = PyPDFLoader(file_path=r'smart_home_manual.pdf')
     data = loader.load()
 
     # Create a FAISS instance for vector database from 'data'
