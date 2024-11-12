@@ -5,6 +5,7 @@ from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 import os
+import streamlit as st
 
 from dotenv import load_dotenv
 load_dotenv()  # Load environment variables from .env (especially openai API key)
@@ -13,7 +14,7 @@ load_dotenv()  # Load environment variables from .env (especially openai API key
 llm = ChatGroq(
     model="llama-3.1-70b-versatile",
     temperature=0,
-    groq_api_key=os.environ["groq_api_key"]
+    groq_api_key=st.secrets["GROQ_API_KEY"]
 )
 
 # Initialize instructor embeddings using the Hugging Face model
