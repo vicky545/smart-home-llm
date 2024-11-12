@@ -18,7 +18,7 @@ llm = ChatGroq(
 
 # Initialize instructor embeddings using the Hugging Face model
 instructor_embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-large")
-vectordb_file_path = os.path.join("smart-home-llm", "faiss_index_sh")
+vectordb_file_path = "faiss_index_sh"
 
 def create_vector_db():
     # Load data from the PDF manual
@@ -33,7 +33,7 @@ def create_vector_db():
 
 def get_qa_chain():
     # Load the vector database from the local folder
-    vectordb = FAISS.load_local(vectordb_file_path, instructor_embeddings, allow_dangerous_deserialization=True)
+    vectordb = FAISS.load_local(vectordb_file_path, instructor_embeddings)
 
     # Create a retriever for querying the vector database
     retriever = vectordb.as_retriever(score_threshold=0.7)
