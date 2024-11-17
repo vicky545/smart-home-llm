@@ -8,7 +8,7 @@ import os
 import streamlit as st
 
 from dotenv import load_dotenv
-load_dotenv()  # Load environment variables from .env (especially openai API key)
+load_dotenv()  # Load environment variables from .env
 
 # Initialize Llama LLM model
 llm = ChatGroq(
