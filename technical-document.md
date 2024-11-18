@@ -47,8 +47,9 @@ graph TD
     E[User Question] -->|Streamlit UI| F[Query Processing]
     F -->|Embedding| G[Vector Search]
     D -->|Similar Documents| G
-    G -->|Context| H[LLama 3.1 LLM]
-    H -->|Generated Answer| I[User Interface]
+    G -->|Contextual Retrieval| H[Prompt Template]
+    H -->|Structured Context| I[Llama 3.1 LLM]
+    I -->|Generated Answer| J[User Interface]
 ```
 
 ### 6. Key Features
