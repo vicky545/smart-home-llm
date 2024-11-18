@@ -50,6 +50,11 @@ graph TD
     G -->|Contextual Retrieval| H[Prompt Template]
     H -->|Structured Context| I[Llama 3.1 LLM]
     I -->|Generated Answer| J[User Interface]
+
+    subgraph Retrieval QA Process
+    G
+    H
+    end
 ```
 
 ### 6. Key Features
